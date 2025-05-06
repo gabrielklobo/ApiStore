@@ -1,0 +1,71 @@
+Moeda: Tibar -> Ouro Real
+
+Tibar 2,5 = 1 Ouro Real
+
+Cada produto ter uma taxa de câmbio: madeira 1 ouro 3 tibares...
+
+Poder cadastrar uma formula personalizada: Artigo de luxo(Natureza) e Reino Central(Reino de Origem)
+
+Trabalhar com transações, assim garantindo que a mesma pessoa tentando comprar o mesmo item não consiga ate a finalização do pedido anterior
+
+Evitar:
+ - Dois reinos com o mesmo nome
+ - Dois itens com o mesmo nome
+ - Evitar a transacao com o mesmo item, cliente, vendedor, reino de origem que nao esteja finalizada
+ - Cadastrar item que seja do tipo Pessoa, Magia negra, Anel de Sauron...
+
+
+Não estou tratando saldos de vendedores e compradores, apenas realizando cadastros e transações
+
+Currency
+ - id
+ - description
+ - value
+
+Kingdom
+ - id
+ - name
+ - region
+
+Category
+ - id
+ - description
+
+Item:
+ - id
+ - description
+
+ItemCurrency
+ - Item
+ - Kingdom
+ - Category
+ - Currency
+ - value
+
+Person
+ - id
+ - name
+ - race
+
+Transaction
+ - id
+ - Item
+ - Customer
+ - Seller
+ - Kingdom
+ - Type(Buy, Sell)
+ - ItemCurrecySource
+ - ItemCurrencyTarget
+ - valueFinal
+ - dateInit
+ - dateFinal
+
+HistoryCurrency
+ - id
+ - Currency
+ - valueOld
+ - valueNew
+ - date
+
+
+
