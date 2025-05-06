@@ -19,7 +19,7 @@ Não estou tratando saldos de vendedores e compradores, apenas realizando cadast
 
 Currency
  - id
- - description
+ - name
  - value
 
 Kingdom
@@ -29,11 +29,11 @@ Kingdom
 
 Category
  - id
- - description
+ - name
 
 Item:
  - id
- - description
+ - name
 
 ItemCurrency
  - Item
@@ -49,7 +49,6 @@ Person
 
 Transaction
  - id
- - Item
  - Customer
  - Seller
  - Kingdom
