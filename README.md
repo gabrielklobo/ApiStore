@@ -1,2 +1,2 @@
 # ApiStore
-Simple API using Java 21 and Spring Boot 3.4.5
+Created a simple API using: - Java 21 - Spring 3.4.5 - H2 DataBase - Spring Data JPA
