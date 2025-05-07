@@ -17,7 +17,7 @@ import br.com.api.store.model.Kingdom;
 import br.com.api.store.service.KingdomService;
 
 @RestController
-@RequestMapping("/cingdom")
+@RequestMapping("/kingdom")
 public class KingdomController {
 
 	private KingdomService service;
