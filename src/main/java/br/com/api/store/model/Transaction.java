@@ -26,10 +26,13 @@ public class Transaction {
 	private Long id;
 
 	@ManyToOne(optional = false)
+	private Item item;
+	
+	@ManyToOne(optional = false)
 	private Person customer;
 
 	@ManyToOne(optional = false)
-	private Person Seller;
+	private Person seller;
 
 	@ManyToOne(optional = false)
 	private Kingdom kingdom;
@@ -44,12 +47,7 @@ public class Transaction {
 	private ItemCurrency itemCurrencyTarget;
 
 	@Column(name = "value_final", nullable = false)
-	private double valueFinal;
+	private double amountFinal;
 
-	@Column(name = "date_init", nullable = false)
-	private Date dateInit;
-
-	@Column(name = "date_final", nullable = false)
-	private Date dateFinal;
-
+	private Date date;
 }

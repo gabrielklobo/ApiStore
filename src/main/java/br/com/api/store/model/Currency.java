@@ -2,7 +2,6 @@ package br.com.api.store.model;
 
 import java.util.List;
 
-import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.OneToMany;
@@ -15,10 +14,8 @@ import lombok.Setter;
 @Getter
 @Setter
 public class Currency extends GenericEntity {
+	private Double amount;
 
-	@Column(nullable = false)
-	private double value;
-	
 	@OneToMany(mappedBy = "currency", fetch = FetchType.LAZY)
-	private List<Transaction> transactions;
+	private List<HistoryCurrency> history;
 }
